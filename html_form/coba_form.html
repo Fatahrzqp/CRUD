@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Sederhana</title>
+    <link rel="icon" type="img/png" href="./gambar/icon.png" sizes="16*16" />
+</head>
+<body>
+    <form action="/action_page.php" method="get" target="_self">
+        <label for="depan">Nama Depan :</label> <br>
+        <input type="text" id="depan" name="i_name" value="budi"> <br>
+        <label for="n_belakang">Nama Belakang :</label> <br>
+        <input type="text" id="n_belakang" name="i_belakang" value="prawira"> <br><br>
+        <input type="submit" value="Kirim">
+        <input type="reset" value="Reset">
+    </form>
+
+    <form action="/action_page.php" method="post" target="_blank">
+        <label for="depan2">Nama Depan :</label> <br>
+        <input type="text" id="depan2" name="i_name" value="Budi"> <br>
+        <label for="n_belakang2">Nama Belakang :</label> <br>
+        <input type="text" id="n_belakang2" name="i_belakang" value="Sujono"> <br><br>
+        <input type="submit" value="Kirim">
+        <input type="reset" value="Reset">
+    </form>
+    <p>Jika anda mengklik tombol "kirim", data formulir akan dikirim ke halaman bernama "/action_page.php".</p>
+</body>
+</html>
