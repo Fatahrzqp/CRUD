@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halo CSS!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: blue;
+            color: yellow;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .sub-header {
+            color: white;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        .sidebar {
+            border: 2px dashed lightblue;
+            padding: 10px;
+            width: 150px;
+            text-align: left;
+        }
+        .sidebar a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 5px 0;
+            font-weight: normal;
+        }
+        .sidebar a:hover {
+            font-weight: bold;
+            color: blue;
+        }
+        .sidebar .hover-effect {
+            font-weight: bold;
+            color: black;
+        }
+        .content {
+            margin-left: 20px;
+            text-align: center;
+            width: 50%;
+        }
+        .logo {
+            width: 100px;
+            height: auto;
+        }
+        .footer {
+            background-color: lightgray;
+            padding: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .motto {
+            color: red;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Halo CSS!</div>
+    <div class="sub-header">Ini adalah website CSS saya</div>
+    <div class="container">
+        <div class="sidebar">
+            <a href="#">Menu 1</a>
+            <a href="#">Menu 2</a>
+            <a href="#">Menu 3</a>
+            <a href="#">Menu 4</a>
+            <a href="#">Menu 5</a>
+            <a href="#" class="hover-effect">Menu 6</a>
+        </div>
+        <div class="content">
+            <img class="logo" src="./gambar/icon.png" alt="Logo Politeknik Negeri Madiun">
+            <h2>TI</h2>
+            <p>Politeknik Negeri Madiun</p>
+            <p class="motto">
+                Mewujudkan pendidikan tinggi vokasi dalam bidang Teknologi Informasi dan penerapannya yang berkualitas, inovatif, dan berdaya saing Nasional.
+            </p>
+        </div>
+    </div>
+    <div class="footer">Fatah Rizqi Pambud | 243307104 | TI-2025</div>
+</body>
+</html>
