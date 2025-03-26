@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Grid</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-gap: 50px;
+            background-color: #B0C4DE;
+            grid-template-columns: auto auto auto auto;
+            padding: 10px;
+        }
+
+        .item {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .item1 {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        /* Skenario 1 */
+        .skenario1 .item1 {
+            grid-row: 1 / 4;
+        }
+
+        /* Skenario 2 */
+        .skenario2 .item1 {
+            grid-row: auto; /* Reset skenario 1 */
+            grid-column: 1 / 4;
+        }
+    </style>
+</head>
+<body>
+    <h2>Layout Default</h2>
+    <div class="grid-container">
+        <div class="item1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+    </div>
+    
+    <h2>Layout Skenario 1</h2>
+    <div class="grid-container skenario1">
+        <div class="item1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+    </div>
+    
+    <h2>Layout Skenario 2</h2>
+    <div class="grid-container skenario2">
+        <div class="item1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+    </div>
+</body>
+</html>

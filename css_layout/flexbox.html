@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - Semua Skenario</title>
+    <style>
+        .wadah-flex {
+            display: flex;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            border: 2px solid black;
+            padding: 10px;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .wadah-flex div {
+            background-color: lightblue;
+            margin: 10px;
+            padding: 10px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Belajar Flexbox - Semua Skenario</h2>
+
+    <div class="wadah-flex">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+
+    <p> <b>Pada Skenario 3 :</b> Menambahkan jumlah elemen dalam .wadah-flex hingga 12, yang menyebabkan tampilan menjadi lebih padat dan jika tidak ada flex-wrap, semua elemen tetap dalam satu baris yang bisa meluap keluar jika ruang tidak cukup.<p>
+    <p> <b>Pada Skenario 4 :</b> Menggunakan properti flex-direction untuk mengubah arah susunan elemen, seperti row untuk horizontal (default), row-reverse untuk membalikkan urutan, column untuk menyusun elemen secara vertikal, dan column-reverse untuk menyusun vertikal tetapi dalam urutan terbalik.</p>
+    <p> <b>Pada Skenario 5 :</b> Menambahkan flex-wrap, yang memungkinkan elemen berpindah ke baris baru jika ruang tidak cukup; nowrap mempertahankan semua elemen dalam satu baris, sedangkan wrap memungkinkan elemen turun ke baris berikutnya, dan wrap-reverse melakukan hal yang sama tetapi dengan baris baru muncul di atas.</p>
+    <p> <b>Pada Skenario 6 :</b> Menambahkan justify-content untuk mengatur distribusi elemen dalam flex container, dengan opsi seperti flex-start untuk menumpuk elemen di kiri, flex-end untuk di kanan, center untuk di tengah, space-around untuk memberikan jarak yang sama di sekeliling elemen, space-between untuk membagi elemen dengan jarak merata tanpa padding di ujung, dan space-evenly untuk menyusun elemen dengan jarak yang benar-benar sama di antara semua elemen termasuk tepi container.</p>
+</body>
+</html>
