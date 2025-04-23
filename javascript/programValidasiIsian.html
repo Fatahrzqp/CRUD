@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Validasi Isian</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f2f6f8;
+            color: #34495e;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #2980b9;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        label {
+            font-weight: bold;
+            font-size: 14px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            margin-bottom: 12px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .error {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: 10px;
+            padding: 12px;
+            background-color: #fdecea;
+            border-radius: 6px;
+        }
+        .success {
+            color: #2ecc71;
+            font-size: 14px;
+            margin-top: 10px;
+            padding: 12px;
+            background-color: #eafaf1;
+            border-radius: 6px;
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Program Validasi Isian</h1>
+        <form id="validationForm">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Masukkan username (minimal 5 karakter)">
+            </div>
+            <div>
+                <label for="phone">Nomor Telepon:</label>
+                <input type="text" id="phone" placeholder="Masukkan nomor telepon (hanya angka)">
+            </div>
+            <div>
+                <button type="button" onclick="validateForm()">Validasi Form</button>
+            </div>
+        </form>
+        <div id="validationResult" class="result"></div>
+    </div>
+
+    <script>
+        function validateForm() {
+            const username = document.getElementById("username").value;
+            const phone = document.getElementById("phone").value;
+            let isValid = true;
+            let message = "";
+            
+            if (username === "") {
+                message += "<p class='error'>Username tidak boleh kosong!</p>";
+                isValid = false;
+            } else if (username.length < 5) {
+                message += "<p class='error'>Username minimal 5 karakter!</p>";
+                isValid = false;
+            }
+            
+            // Validate phone number
+            if (phone === "") {
+                message += "<p class='error'>Nomor telepon tidak boleh kosong!</p>";
+                isValid = false;
+            } else if (!/^[0-9]+$/.test(phone)) {
+                message += "<p class='error'>Nomor telepon hanya boleh berisi angka!</p>";
+                isValid = false;
+            }
+            
+            if (isValid) {
+                message = "<p class='success'>Semua data valid!</p>";
+            }
+            
+            document.getElementById("validationResult").innerHTML = message;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic Dialog dengan jQuery</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 50px;
+      text-align: center;
+    }
+
+    #dialog {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      z-index: 999;
+      width: 300px;
+    }
+
+    #overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 998;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .btn:hover {
+      background-color: #1e40af;
+    }
+
+    .close-btn {
+      margin-top: 15px;
+      background-color: #ef4444;
+    }
+
+    .close-btn:hover {
+      background-color: #b91c1c;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Contoh Basic Dialog jQuery</h2>
+  <button class="btn" id="openDialog">Tampilkan Dialog</button>
+
+  <div id="overlay"></div>
+
+  <div id="dialog">
+    <h3>Halo, ini dialog!</h3>
+    <p>Ini adalah jendela dialog sederhana yang dibuat dengan jQuery dan CSS.</p>
+    <button class="btn close-btn" id="closeDialog">Tutup</button>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+      $('#openDialog').click(function(){
+        $('#overlay, #dialog').fadeIn();
+      });
+
+      $('#closeDialog, #overlay').click(function(){
+        $('#overlay, #dialog').fadeOut();
+      });
+    });
+  </script>
+
+</body>
+</html>
